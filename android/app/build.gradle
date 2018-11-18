@@ -16,7 +16,7 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file(rootDir.absolutePath + "/release.jks")
+            storeFile file("../release.jks")
             storePassword project.hasProperty("ANDROID_KEYSTORE_PASS") ? ANDROID_KEYSTORE_PASS : System.getenv("ANDROID_KEYSTORE_PASS")
             keyAlias project.hasProperty("ANDROID_ALIAS_NAME") ? ANDROID_ALIAS_NAME : System.getenv("ANDROID_ALIAS_NAME")
             keyPassword project.hasProperty("ANDROID_ALIAS_PASS") ? ANDROID_ALIAS_PASS : System.getenv("ANDROID_ALIAS_PASS")
